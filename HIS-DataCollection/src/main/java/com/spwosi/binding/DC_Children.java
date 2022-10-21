@@ -7,6 +7,7 @@ import lombok.Data;
 @Data
 public class DC_Children {
 
-	private LocalDate childrenDob;
-	private Long childrenSSN;
+	private String childName;
+	private Integer childAge;
+	private Long childrenSsn;
 }

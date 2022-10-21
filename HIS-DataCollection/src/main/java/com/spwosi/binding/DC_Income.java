@@ -5,6 +5,9 @@ import lombok.Data;
 @Data	
 public class DC_Income {
 
-	private Integer empIncome;
-	private Integer propertyIncome;
+	private Integer incomeId;
+	private Long caseNum;
+	private Double empIncome;
+	private Double propertyIncome;
 }
+

@@ -8,4 +8,5 @@ import com.spwosi.entity.DC_CasesEntity;
 
 public interface DC_CasesRepo extends JpaRepository<DC_CasesEntity, Serializable> {
 
+	public DC_CasesEntity findByAppId(Integer appId);
 }

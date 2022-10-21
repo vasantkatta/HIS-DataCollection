@@ -7,9 +7,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
-
 import lombok.Data;
 
 @Entity
@@ -19,14 +16,8 @@ public class DC_ChildrenEntity {
 
 	@Id
 	@GeneratedValue
-	private Integer childrenId;
-	private Integer caseNum;
-	private LocalDate childrenDob;
-	private Long childrenSSN;
-	@CreationTimestamp
-	private LocalDate createdDate;
-	@UpdateTimestamp
-	private LocalDate updatedDate;
-	private String createdBy;
-	private String updatedBy;
+	private Integer childId;
+	private LocalDate childDob;
+	private Long childSsn;
+	private Long caseNum;
 }

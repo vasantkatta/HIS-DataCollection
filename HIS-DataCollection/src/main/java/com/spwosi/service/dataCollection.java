@@ -1,21 +1,29 @@
 package com.spwosi.service;
 
-import com.spwosi.entity.DC_CasesEntity;
-import com.spwosi.entity.DC_EducationEntity;
-import com.spwosi.entity.DC_IncomeEntity;
+import java.util.List;
+
+import com.spwosi.binding.DC_Children;
+import com.spwosi.binding.DC_Education;
+import com.spwosi.binding.DC_Income;
+import com.spwosi.binding.DC_PlanSelection;
+import com.spwosi.binding.DC_Summary;
 
 public interface dataCollection {
+	
+	public Long loadCaseNum(Integer appId);
 
-	public Integer createCase();
+	//public Long findAppById(Integer appId);
 	
-	public Integer planSelection(DC_CasesEntity caseNum);
+	public List<String> getPlanNames();
 	
-	public Integer getIncomeDetails(DC_CasesEntity caseNum);
+	public Long savePlanSelection(DC_PlanSelection planSelection);
 	
-	public Integer getEducationDetails(DC_CasesEntity caseNum);
+	public Long saveIncomeData(DC_Income income);
 	
-	public Integer getKidsDetails(DC_CasesEntity caseNum);
+	public Long saveEducation(DC_Education education);
 	
-	public void getSummary(DC_IncomeEntity income, DC_EducationEntity edu)
+	public Long saveChildren(List<DC_Children> childs);
+	
+	public DC_Summary getSummary(Long caseNum);
 	
 }

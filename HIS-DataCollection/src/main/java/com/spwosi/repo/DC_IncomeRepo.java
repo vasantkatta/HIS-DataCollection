@@ -8,4 +8,6 @@ import com.spwosi.entity.DC_IncomeEntity;
 
 public interface DC_IncomeRepo extends JpaRepository<DC_IncomeEntity, Serializable> {
 
+	public DC_IncomeEntity findByCaseNum(Long caseNum);
+	
 }
